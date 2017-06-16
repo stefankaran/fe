@@ -1,14 +1,38 @@
-### FE Starter
+## FE Starter
 ###### *With all useful helpers.*
 
-> SCSS
-* Core
-* Functions
-* Mixins
-* Variables
+<br />
+
+> ### **_SCSS_**
+```
+Core
+Functions
+Mixins
+Variables
+Layouts
+Components
+Blocks
+Pages
+```
+<hr>
+
+> ### **_HTML_ / templates**
+```
+Nav
+Socials
+Search
+Hero
+Media
+Form
+Figure
+Quote
+```
+<br />
 
 
-### Setup
-- git clone https://github.com/stefankaran/fe.git
-- npm install
-- gulp
+## Setup
+```
+git clone https://github.com/stefankaran/fe.git
+npm install
+gulp
+```

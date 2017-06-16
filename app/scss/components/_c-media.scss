@@ -1,0 +1,13 @@
+//----- Media list & media object
+.c-media {
+
+  // Wrap around c-media items
+  &-list {}
+
+  &__body {}
+  &__title {}
+  &__intro {}
+  &__btn {}
+  &__media {}
+  &__image {}
+}

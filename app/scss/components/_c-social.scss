@@ -1,0 +1,15 @@
+//----- Socials
+.c-social {
+
+    &__item { // Same style for every social item
+        display: inline-block;
+    }
+
+    &__facebook {}
+    &__twitter {}
+    &__instagram {}
+    &__google-plus {}
+    &__pinterest {}
+    &__telegram {}
+    &__whatsapp {}
+}
