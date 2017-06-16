@@ -1,0 +1,36 @@
+//----- Mixin / Arrow
+//----- Example @include arrow(20px, 2px, #f00, left);
+@mixin arrow($size, $border-width, $border-color, $direction){
+  display: inline-block;
+  position: relative;
+  height: $size * 1.5;
+  width: $size * 1.5;
+	cursor: pointer;
+  &:after {
+    content: '';
+		direction: ltr; // ie9
+		width: $size;
+		height: $size;
+		border-right: $border-width solid $border-color;
+		border-bottom: $border-width solid $border-color;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+		margin: auto;
+    @if ($direction == top) {
+      @include vendor-prefixes(transform, rotate(225deg));
+			#{$direction}: 35%;
+    } @else if ($direction == right) {
+      @include vendor-prefixes(transform, rotate(-45deg));
+			#{$direction}: 35%;
+    } @else if ($direction == left) {
+      @include vendor-prefixes(transform, rotate(135deg));
+			#{$direction}: 35%;
+    } @else if ($direction == bottom) {
+      @include vendor-prefixes(transform, rotate(45deg));
+			#{$direction}: 35%;
+    }
+  }
+}

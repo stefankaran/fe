@@ -1,0 +1,50 @@
+//----- Variables / Colors
+
+//----- Brand Main
+$brand-primary    : #000;
+$brand-secondary  : #fff;
+
+$colors           : (
+  link            : ( //----- Link colors
+    text          : $brand-primary,
+    text-hover    : $brand-secondary
+  ),
+  text            : ( //----- Text colors
+    primary       : $brand-primary,
+    secondary     : $brand-secondary
+  ),
+  buttons         : ( //----- Buttons colors
+    primary       : $brand-primary,
+    secondary     : $brand-secondary
+  ),
+  border          : ( //----- Border colors
+    primary       : $brand-primary,
+    secondary     : $brand-secondary
+  ),
+  form            : ( //----- Form colors
+    error         : #ff0000,
+    success       : #00cc66
+  ),
+  socials         : ( //----- Socials colors
+    facebook      : #3B5998,
+    fb-messenger  : #0084FF,
+    twitter       : #1DA1F2,
+    youtube       : #CD201F,
+    whatsapp      : #43D854
+  )
+);
+
+
+// //----- Variables used in the @for loop for different brand colors
+// // Example... Socials
+// $buttonsArray  : facebook, fb-messenger, twitter, youtube, viber, whatsapp;
+// $buttonsLength : length($buttonsArray) + 1;
+// // In scss file
+// .c-btn {
+// @for $soc from 1 to $buttonsLength {
+// $currentButton : nth($buttonsArray, $soc);
+// &--#{$currentButton} { // color
+// color          : colorFunc(socials, $currentButton);
+// }
+// }
+// }

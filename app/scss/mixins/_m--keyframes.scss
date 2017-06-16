@@ -1,0 +1,73 @@
+//----- Animation and Keyframes mixins -----//
+//----- Animation Properties
+//----- Every property is set to default
+@mixin animate(
+  $name:            null,  // Default: none
+  $duration:        null,  // Default: 0s
+  $timing-function: null,  // Default: ease
+  $delay:           null,  // Default: 0s
+  $iteration-count: null,  // Default: 1
+  $direction:       null,  // Default: normal
+  $fill-mode:       null,  // Default: none
+  $play-state:      null   // Default: running
+  ) {
+  //----- Animation vendor prefixes
+  @each $vendor in $vendor-prefixes {
+  	//----- $vendor-prefixes defined in _variables.scss
+    #{$vendor}animation-name: #{$name};
+    #{$vendor}animation-duration: #{$duration};
+    #{$vendor}animation-timing-function: #{$timing-function};
+    #{$vendor}animation-delay: #{$delay};
+    #{$vendor}animation-iteration-count: #{$iteration-count};
+    #{$vendor}animation-direction: #{$direction};
+    #{$vendor}animation-fill-mode: #{$fill-mode};
+    #{$vendor}animation-play-state: #{$play-state};
+  }
+}
+//----- Keyframes vendor prefixes
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+  @-moz-keyframes #{$animationName} {
+    @content;
+  }
+  @-ms-keyframes #{$animationName} {
+    @content;
+  }
+  @-o-keyframes #{$animationName} {
+    @content;
+  }
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+
+// //----- Example...
+// //----- Zoom
+// // Define keyframes using mixin for all vendor prefixes
+// // Check mix-keyframes.scss for more details
+// @include keyframes(pulse) {
+// 	0% {
+//     transform: scale(1);
+//   }
+// 	100% {
+//     transform: scale(1.2);
+//   }
+// }
+// //----- Final mixin
+// @mixin pulse {
+//   //----- Call animate mixin with necessary properties
+//   //----- Other will stay with default value
+//   @include animate(
+//     $name: pulse,
+//     $duration: 30s,
+//     $iteration-count: infinite,
+//     $direction: alternate
+//   );
+// }
+// .zoom {
+//   &.active {
+//     @include pulse;
+//   }
+// }

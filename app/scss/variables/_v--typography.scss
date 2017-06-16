@@ -1,0 +1,27 @@
+//----- Variables / Typography
+
+//------FONT-FACE
+// @include fontFace (Pinstripe-limo, pinstripe-limo/Pinstripe-limo, normal, normal, woff woff2);
+
+//------FONT FAMILY VARIBALE
+$fontDefault            : Arial, sans-serif;
+// $font-family-primary    : 'Pinstripe-limo', $fontDefault;
+
+//----- Font weight
+$font-weight-light      : 300;
+$font-weight-regular    : 400;
+$font-weight-bold       : 700;
+
+//----- Font size
+$font-size-base         : 10px;
+
+//------GLOBAL FONT SETTINGS
+html {
+  @include font-size-vw($font-size-base, $font-size-base, $font-size-base);
+}
+body {}
+
+h1 {}
+h2 {}
+a {}
+p {}

@@ -1,0 +1,14 @@
+//----- Mixin / Shortcuts to set element invisible on specific device
+//----- Example @include invisible(phone);
+@mixin invisible($name) {
+  @if map-has-key($breakpoints, $name) {
+    @media #{map-get($breakpoints, $name)} {
+      width: 0;
+      height: 0;
+      position: absolute;
+      left: 0;
+      text-indent: -5000px;
+      overflow: hidden;
+    }
+  }
+}

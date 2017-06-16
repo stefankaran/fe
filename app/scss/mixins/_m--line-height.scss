@@ -1,0 +1,15 @@
+//----- Mixin / Line Height
+
+// Example @include line-height(10px, 20px, 30px);
+// rem Line-Height
+@mixin line-height($fz-desktop, $fz-tablet, $fz-phone) {
+  @include breakpoint(desktop) {
+    line-height: cr($fz-desktop);
+  }
+  @include breakpoint(tablet) {
+    line-height: cr($fz-tablet);
+  }
+  @include breakpoint(phone) {
+    line-height: cr($fz-phone);
+  }
+}

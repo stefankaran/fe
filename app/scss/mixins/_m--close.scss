@@ -1,0 +1,29 @@
+//----- Mixin / Close
+//----- Example @include close(45px, 2px, red);
+@mixin close($size, $width, $border-color) {
+  display: inline-block;
+  width: $size;
+  height: $size;
+  position: relative;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  &:after,
+  &:before {
+    content: '';
+    width: $width;
+    height: $size;
+    background-color: $border-color;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 50%;
+  }
+  &:before {
+    @include vendor-prefixes(transform, rotate(45deg));
+  }
+  &:after {
+    @include vendor-prefixes(transform, rotate(-45deg));
+  }
+}

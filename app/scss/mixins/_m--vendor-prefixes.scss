@@ -1,0 +1,11 @@
+//----- Mixin / Vendor prefixes
+//----- Example... @include vendor-prefixes(border-radius, 50%); // all
+//----- Example... @include vendor-prefixes(border-radius, 50%, webkit moz); // just used
+@mixin vendor-prefixes($property, $value, $vendors: webkit moz ms o) {
+	@if $vendors {
+		@each $vendor in $vendors {
+			#{"-" + $vendor + "-" + $property}: #{$value};
+		}
+	}
+	#{$property}: #{$value};
+}

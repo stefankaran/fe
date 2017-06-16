@@ -1,0 +1,27 @@
+///------------------------------------
+//    #CORE
+//------------------------------------
+
+
+// Core files must be included and must come first.
+// They help us to make consistence across browsers, building CSS layouts
+// easier and remove built-in browser styling.
+// Core files are the first files that will be compiled in css.
+
+
+
+
+// CONTENTS
+//
+// CORE
+// Reset...............Reset HTML elements.
+// Box-sizing..........Build CSS layouts easier.
+// Normalize...........normalize.css v4.1.1.
+
+
+
+
+// import files
+@import "normalize";
+@import "box-sizing";
+@import "reset";

@@ -1,0 +1,32 @@
+//----- Mixin / Grid
+// Example...
+// article {
+//   @include breakpoint(phone) {
+//     @include grid(2, 1%);
+//   }
+//   @include breakpoint(tablet) {
+//     @include grid(3, 1.5%);
+//   }
+//   @include breakpoint(desktop) {
+//     @include grid(4, 2%);
+//   }
+// }
+@mixin grid($col, $m:0) {
+  float: left;
+  width: ((100% - (($col - 1) * $m)) / $col);
+  @if ($m != 0) {
+    margin-right: $m;
+    margin-bottom: $m;
+  }
+  &:nth-child(#{$col}n) {
+    margin-right: 0;
+  }
+
+  // Be careful with this!!
+  &:nth-child(#{$col}n + 1) {
+    clear: both;
+  }
+  // Because if you first set global, and after that only for specific device
+  // It will read both !
+  // USE THIS MIXIN LIKE EXAMPLE ON TOP!
+}

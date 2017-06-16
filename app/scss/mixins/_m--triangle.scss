@@ -1,0 +1,12 @@
+//----- Mixin / Triangle
+//----- direction options: top, right, bottom, left. (to match border-'direction' of css)
+//----- Example @include triangle(bottom, 12px, #f00);
+@mixin triangle($direction:left, $width:34px, $color:#89D4E7) {
+	width: 0;
+	height: 0;
+	display: inline-block;
+	$opposite: nth((top,right,bottom,left), index((bottom,left,top,right),$direction));
+	border: solid $width transparent;
+	border-#{$direction}: none;
+	border-#{$opposite}: solid $width $color;
+}

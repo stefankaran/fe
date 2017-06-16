@@ -1,0 +1,19 @@
+//----- Mixin / Absolute position
+//----- Example @include absolute(center);
+@mixin absolute($position) {
+  $per: 50%;
+  position: absolute;
+  @if $position == 'center' {
+    top: #{$per};
+    left: #{$per};
+		@include vendor-prefixes(transform, translate(-#{$per}, -#{$per}));
+  }
+  @else if $position == 'center-vertical' {
+    top: #{$per};
+		@include vendor-prefixes(transform, translateY(-#{$per}));
+  }
+  @else if $position == 'center-horizontal' {
+    left: #{$per};
+		@include vendor-prefixes(transform, translateX(-#{$per}));
+  }
+}

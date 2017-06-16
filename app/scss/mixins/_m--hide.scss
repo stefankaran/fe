@@ -1,0 +1,9 @@
+//----- Mixin / Shortcuts to hide element on specific device
+//----- Example @include hide(phone);
+@mixin hide($name) {
+  @if map-has-key($breakpoints, $name) {
+    @media #{map-get($breakpoints, $name)} {
+      display: none;
+    }
+  }
+}

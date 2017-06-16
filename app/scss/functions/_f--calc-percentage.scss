@@ -1,0 +1,4 @@
+//----- Functions / Calc px to %
+@function cp($target, $container) {
+  @return ($target / $container) * 100%;
+}

@@ -1,0 +1,34 @@
+//----- Variables / Breakpoints
+
+// Tablet
+$tabletPortrait     : 768px;
+$tabletLandscape    : 1023px;
+
+// Phone
+// $phoneSmall      : $tabletPortrait / 2;
+$phone              : $tabletPortrait - 1;
+$overPhone          : $tabletPortrait;
+
+// Desktop
+$toDesktop          : $tabletLandscape;
+$desktop            : $tabletLandscape + 1;
+
+// vw
+$siteMaxWidth       : 1600px; // full wrap width - like on design
+
+// Max & min width
+$max                : max-width;
+$min                : min-width;
+
+//----- Breakpoints
+$breakpoints        : (
+  // 'phoneSmall'   : ($max: #{$phoneSmall}),
+  'phone'           : '(#{$max}: #{$phone})',
+  'overPhone'       : '(#{$min}: #{$overPhone})',
+  'tablet'          : '(#{$min}: #{$tabletPortrait}) and (#{$max}: #{$tabletLandscape})',
+  'tabletLandscape' : '(#{$min}: #{$tabletPortrait}) and (#{$max}: #{$tabletLandscape}) and (orientation:landscape)',
+  'tabletPortrait'  : '(#{$min}: #{$tabletPortrait}) and (#{$max}: #{$tabletLandscape}) and (orientation:portrait)',
+  'toDesktop'       : '(#{$max}: #{$toDesktop})',
+  'desktop'         : '(#{$min}: #{$desktop})',
+  'siteMaxWidth'    : '(#{$max}: #{$siteMaxWidth})'
+);

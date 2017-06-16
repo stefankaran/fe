@@ -1,0 +1,5 @@
+//----- Functions / Calc px to rem
+@function cr($size) {
+  $remSize: $size / $font-size-base;
+  @return #{$remSize}rem;
+}

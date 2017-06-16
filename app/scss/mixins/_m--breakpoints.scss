@@ -1,0 +1,29 @@
+//----- Mixin / Breakpoints
+// Just set variable for breakpoint in _settings.breakpoints.scss
+@mixin breakpoint($name, $push: false) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $name) {
+    // Prints a media query based on the value
+    @media #{map-get($breakpoints, $name)} {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  // But $push is defined
+  @else if $push != false {
+    // Add the new breakpoint to the map
+    $breakpoints: map-merge($breakpoints, ($name: $push)) !global;
+    // And re-call the mixin normally
+    @include breakpoint($name) {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  // And there is no push
+  @else {
+    // Just warn the user
+    @warn unquote("\"Couldn't find a breakpoint named \"#{$name}\" !!!\"");
+  }
+}
