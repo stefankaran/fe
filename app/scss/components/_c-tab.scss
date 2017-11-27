@@ -1,0 +1,38 @@
+//----- Tabs
+.c-tab {
+  overflow: hidden;
+  &__links {
+    overflow: hidden;
+  }
+  &__link {}
+  &__contents {
+    position: relative;
+    // width: 100%;
+    // display: inline-block;
+  }
+  &__content {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: block;
+    height: 0;
+    overflow: hidden;
+    .c-btn--visible,
+    .c-btn--hidden {
+      // @include vendor-prefixes(transition, none);
+      display: none; // To avoid transition effect with btns
+    }
+    &.active {
+      height: auto;
+      visibility: visible;
+      position: relative;
+      overflow: visible;
+      .c-btn--visible,
+      .c-btn--hidden {
+        // @include vendor-prefixes(transition, all .3s);
+        display: block; // To avoid transition effect with btns
+      }
+    }
+  }
+}

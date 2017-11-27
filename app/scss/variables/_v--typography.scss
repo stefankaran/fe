@@ -1,27 +1,29 @@
 //----- Variables / Typography
 
 //------FONT-FACE
-// @include fontFace (Pinstripe-limo, pinstripe-limo/Pinstripe-limo, normal, normal, woff woff2);
+// @include fontFace (FontName, fontFolder, 700, italic);
+// @include fontFace (Sketch, Sketch/Sketch, normal, normal, woff woff2);
 
 //------FONT FAMILY VARIBALE
 $fontDefault            : Arial, sans-serif;
-// $font-family-primary    : 'Pinstripe-limo', $fontDefault;
-
-//----- Font weight
-$font-weight-light      : 300;
-$font-weight-regular    : 400;
-$font-weight-bold       : 700;
+// $ff == $font-family
+$ff-main                : $fontDefault;
 
 //----- Font size
 $font-size-base         : 10px;
 
 //------GLOBAL FONT SETTINGS
 html {
-  @include font-size-vw($font-size-base, $font-size-base, $font-size-base);
+  @include font-size-vw($font-size-base, $font-size-base);
 }
-body {}
+body {
+    font-family: $ff-main;
+    -webkit-font-smoothing: antialiased;
+}
 
 h1 {}
 h2 {}
-a {}
+a {
+    text-decoration: none;
+}
 p {}

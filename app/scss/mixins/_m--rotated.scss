@@ -1,0 +1,22 @@
+//----- Rotated Text
+@mixin rotated {
+    width: 100%;
+    @include absolute(center-vertical);
+    left: -7.2rem;
+    width: 100%;
+    height: 100%;
+    // IMPORTANT
+    // max-width:;// You need to set max-width in every block... in that case, max width == block height
+    // For example see b-raleted
+    // IMPORTANT
+
+    &__inner {
+        @include vendor-prefixes(transform, translate(0,100%) rotate(-90deg));
+        @include vendor-prefixes(transform-origin, 0 0);
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        text-align: center;
+    }
+}

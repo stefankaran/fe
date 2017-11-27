@@ -14,7 +14,7 @@ $toDesktop          : $tabletLandscape;
 $desktop            : $tabletLandscape + 1;
 
 // vw
-$siteMaxWidth       : 1600px; // full wrap width - like on design
+$siteMaxWidth       : $site-desk-design; // full wrap width - like on design
 
 // Max & min width
 $max                : max-width;

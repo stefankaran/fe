@@ -1,6 +1,13 @@
 //----- Animation and Keyframes mixins -----//
 //----- Animation Properties
 //----- Every property is set to default
+$vendor-prefixes:
+'-webkit-'
+'-moz-'
+'-o-'
+'-ms-'
+''
+;
 @mixin animate(
   $name:            null,  // Default: none
   $duration:        null,  // Default: 0s

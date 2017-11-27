@@ -1,7 +1,5 @@
-## FE Starter
-###### *With all useful helpers.*
+## Hello Life
 
-<br />
 
 > ### **_SCSS_**
 ```
@@ -14,25 +12,11 @@ Components
 Blocks
 Pages
 ```
-<hr>
-
-> ### **_HTML_ / templates**
-```
-Nav
-Socials
-Search
-Hero
-Media
-Form
-Figure
-Quote
-```
-<br />
 
 
 ## Setup
 ```
-git clone https://github.com/stefankaran/fe.git
+git clone
 npm install
 gulp
 ```

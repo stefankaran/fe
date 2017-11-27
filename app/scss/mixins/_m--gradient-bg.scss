@@ -1,0 +1,9 @@
+//----- Background color gradient -- Only from LEFT to RIGHT
+// Example: @include gradient-background(red, blue);
+@mixin gradient-background($start, $stop){
+    background: $start; /* Old browsers */
+    background: -webkit-linear-gradient(left, $start , $stop); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, $start, $stop); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, $start, $stop); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, $start , $stop); /* Standard syntax (must be last) */
+}

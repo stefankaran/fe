@@ -19,6 +19,7 @@
     display: block;
     top: 0;
     left: 50%;
+    @include vendor-prefixes(border-radius, 5px);
   }
   &:before {
     @include vendor-prefixes(transform, rotate(90deg));

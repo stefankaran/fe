@@ -1,0 +1,7 @@
+//----- Font color gradient
+@mixin gradient-text($fallback, $left, $right) {
+  color: $fallback;
+  background: -webkit-linear-gradient(135deg, $right, $left);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

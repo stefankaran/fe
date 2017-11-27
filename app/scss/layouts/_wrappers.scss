@@ -1,5 +1,5 @@
 //----- Wrappers
 .l {
-
-  &--site {}
+  @include center-block;
+  max-width: $siteMaxWidth;
 }
